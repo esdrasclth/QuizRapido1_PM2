@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizRapido1_PM2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Calculadora Básica"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+                x:Name="Number1"
+                Placeholder="Número 1"
+                Keyboard="Numeric"
+                HorizontalOptions="Fill" />
+
+            <Entry
+                x:Name="Number2"
+                Placeholder="Número 2"
+                Keyboard="Numeric"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="Sumar"
+                Clicked="OnOperationClicked"
+                CommandParameter="add"
+                HorizontalOptions="Fill" />
+            <Button
+                Text="Restar"
+                Clicked="OnOperationClicked"
+                CommandParameter="subtract"
+                HorizontalOptions="Fill" />
+            <Button
+                Text="Multiplicar"
+                Clicked="OnOperationClicked"
+                CommandParameter="multiply"
+                HorizontalOptions="Fill" />
+            <Button
+                Text="Dividir"
+                Clicked="OnOperationClicked"
+                CommandParameter="divide"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
